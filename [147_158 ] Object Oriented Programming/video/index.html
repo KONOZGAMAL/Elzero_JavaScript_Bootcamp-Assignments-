@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function User(id, nume, age, sallery) {
+            this.i = id
+            this.n = nume
+            this.a = age
+            this.s = sallery > 6000 ? sallery : sallery + 80;
+            this.fun = function () {
+                return `hi ya ${this.n} your age =>${this.a}`
+            }
+        }
+        let one = new User(19, "koko", 20, 6000)
+        let two = new User(20, "lolo", 23, 7000)
+        let three = new User(21, "konooz", 24, 8000)
+
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        //////////
+        console.log(one.fun());
+        console.log(two.fun());
+        console.log(three.fun());
+        ///////////////////////
+        class User1 {
+             a =10;
+            constructor(id, nume, age, sallery) {
+                this.i = id
+                this.n = nume
+                this.a = age
+                this.s = sallery > 6000 ? sallery : sallery + 80;
+                this.fun = function () {
+                    return `hi ya ${this.n} your age =>${this.a}`
+                }
+
+            }
+            update(newName, id) {
+                this.n = newName
+                this.i = id
+            }
+        }
+        let one1 = new User1(19, "koko", 20, 6000)
+        one1.update("amire", 80)
+
+        console.log(one1.n);
+        console.log(one1.i);
+        ///////////////
+
+        let arr = "koko"
+        let arr2 = new String("lolo")
+
+        console.log(arr);
+        console.log(arr2);
+        console.log(typeof arr);
+        console.log(typeof arr2);
+
+        console.log(arr instanceof String);
+        console.log(arr2 instanceof String);
+        ////////////////////
+        console.log(arr.constructor === String);
+        console.log(arr2.constructor === String);
+        console.log("_".repeat(20));
+        let num = 100
+        let num2 = new Number(100)
+
+        console.log(num);
+        console.log(num2);
+        console.log(typeof num);
+        console.log(typeof num2);
+
+        console.log(num instanceof Number);
+        console.log(num2 instanceof Number);
+        ////////////////////
+        console.log(num.constructor === Number);
+        console.log(num2.constructor === Number);
+
+        console.log("_".repeat(20));
+        let b = true
+
+        let b2 = new Boolean(100)
+
+        console.log(b);
+        console.log(b2);
+        console.log(typeof b);
+        console.log(typeof b2);
+
+        console.log(b instanceof Boolean);
+        console.log(b2 instanceof Boolean);
+        ////////////////////
+        console.log(b.constructor === Boolean);
+        console.log(b2.constructor === Boolean);
+        //////////////////
+        console.log("_".repeat(20));
+        let obj = {a:"lolo"}
+
+        let obj2 = new Object({a:"koko"})
+
+        console.log(obj);
+        console.log(obj2);
+        console.log(typeof obj);
+        console.log(typeof obj2);
+
+        console.log(obj instanceof Object);
+        console.log(obj2 instanceof Object);
+        ////////////////////
+        console.log(obj.constructor === Object);
+        console.log(obj2.constructor === Object);
+        //////////////
+
+    </script>
+</body>
+
+</html>

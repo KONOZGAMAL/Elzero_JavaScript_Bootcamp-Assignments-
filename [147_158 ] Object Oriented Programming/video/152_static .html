@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log(parseInt("199mmm"));
+        class Student {
+            static count = 0
+            constructor(name, age, gender) {
+                this.n = name;
+                this.a = age;
+                this.g = gender;
+                // Student.count++
+                Student.count += 2
+            }
+            sayHello() {
+                return `Hello ya ${this.n} your age =>${this.a}`
+            }
+            static fun() {
+                return `Number student is ${this.count}`
+            }
+        }
+        let oneStudent = new Student("amire", 19, "famel")
+        let TwoStudent = new Student("Amhed", 34, "male")
+
+        console.log(oneStudent);
+        console.log(oneStudent.sayHello());
+        console.log(Student.fun());
+        console.log("_".repeat(20));
+        console.log(TwoStudent);
+        console.log(TwoStudent.sayHello());
+
+        console.log("#".repeat(20));
+
+        class User {
+            #e;
+            constructor(id, name, age, priv) {
+                this.i = id
+                this.n = name
+                this.a = age
+                this.#e = priv;
+            }
+            sayHello() {
+                return `Hello `
+            }
+            sayMg() {
+                return  parseInt(this.#e)
+            }
+        }
+        let U = new User(2, "amire", 44, "40000000")
+        console.log(U);
+        console.log(U.sayMg());
+        //////////////////////////////////
+
+        class Admin extends User {
+            constructor(id, name, age ,priv, permision) {
+                super(id,name,age,priv)
+                this.p = permision
+            }
+        }
+        let oneAdmin = new Admin(1, "lolo", 22,"9900Amire11", 100)
+        console.log(oneAdmin);
+        console.log(oneAdmin.sayHello());
+        console.log(oneAdmin.sayMg());
+
+        class Adminone extends Admin {
+            constructor(id, name, age,priv, permision, add) {
+                super(id, name, age,priv, permision)
+                this.ad = add;
+            }
+        }
+
+        let Adminone1 = new Adminone(1, "lolo", 22,'8888koko', 100, "Adddddd")
+        console.log(Adminone1);
+        console.log(Adminone1.sayHello());
+        console.log(Adminone1.sayMg());
+        //////////////////////////////
+        
+
+
+    </script>
+</body>
+
+</html>
